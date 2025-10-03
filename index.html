@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Luc.IA</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html,body { 
+      height: 100%; 
+      font-family: 'Poppins', sans-serif;
+      color: #111; 
+      background: #ffeef5; 
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 920px;
+      background: #fff; 
+      border-radius: 14px;
+      padding: 36px;
+      border: 2px solid #f28cb3; 
+      box-shadow: 0 8px 20px rgba(242, 140, 179, 0.25);
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .hero { padding-right: 8px; }
+
+    .avatars {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      justify-content: center;
+    }
+
+    .avatar {
+      width: 84px; height: 84px;
+      border-radius: 14px;
+      object-fit: cover;
+      background: linear-gradient(135deg,#ffe4ef,#fff);
+      box-shadow: 0 6px 18px rgba(242, 140, 179, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .avatar.large {
+      width: 168px;
+      height: 168px;
+    }
+
+    .avatar:hover {
+      transform: scale(1.05);
+    }
+
+    .hero-text h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #d6336c;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-text .subtitle {
+      font-size: 16px;
+      font-weight: 500;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .hero-text .description {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #374151;
+      margin-bottom: 20px;
+    }
+
+    .qualities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .quality {
+      background: linear-gradient(135deg, #ffe0ed, #ffd6e6);
+      border: 1px solid #f28cb3;
+      border-radius: 12px;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #a83265;
+      box-shadow: 0 4px 12px rgba(242,140,179,0.2);
+      transition: all 0.2s ease;
+    }
+
+    .quality:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(242,140,179,0.25);
+      background: linear-gradient(135deg, #ffd6e6, #ffb3d1);
+    }
+
+    .doc-link {
+      display: inline-block;
+      margin-bottom: 22px;
+      text-decoration: none;
+      background: #ffe0ed;
+      color: #a83265;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .section { margin-top: 8px; }
+    .section h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .section p {
+      color: #374151;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .side {
+      background: rgba(255,245,250,0.9);
+      border-radius: 12px;
+      padding: 18px;
+      border: 1px solid #f28cb3;
+      height: fit-content;
+    }
+    .side h3 { font-size: 16px; margin-bottom: 10px; }
+    .contact-list {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid rgba(16,24,40,0.08);
+      font-size: 14px;
+      text-decoration: none;
+      color: #0f172a;
+    }
+
+    .socials {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .socials a {
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid rgba(16,24,40,0.08);
+      font-size: 14px;
+      color: #0f172a;
+    }
+
+    footer.small {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 880px) {
+      .card { grid-template-columns: 1fr; padding: 22px; }
+      .side { order: 2; margin-top: 12px; }
+      .avatars { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <article class="card" role="main" aria-labelledby="hero-title">
+      <div class="hero">
+
+        <!-- Dos imágenes grandes clicables -->
+        <div class="avatars">
+          <a href="img/lucia.jpg" target="_blank">
+            <img class="avatar large" src="img/lucia.jpg" alt="Chica sonriente" />
+          </a>
+          <a href="img/lift.jpg" target="_blank">
+            <img class="avatar large" src="img/lift.jpg" alt="Niña pequeña" />
+          </a>
+        </div>
+
+        <!-- Hero text -->
+        <div class="hero-text">
+          <h1 id="hero-title">Lucía González</h1>
+          <p class="subtitle">Ingeniera informática | Máster en Big Data & IA</p>
+          <p class="description">
+            Más de 2 años de experiencia como consultora de datos en Alemania,
+            trabajando en proyectos con <strong>BMW</strong> y <strong>BOSCH</strong>.
+          </p>
+
+          <div class="qualities">
+            <div class="quality">Experiencia internacional</div>
+            <div class="quality">Visión transformadora</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="side">
+        <h3>Contáctame</h3>
+
+        <div class="contact-list">
+          <a class="contact-item" href="mailto:luciabeltrangonzalez@gmail.com">✉️ luciabeltrangonzalez@gmail.com </a>
+          <a class="contact-item" href="tel:+15555555555">📞 +34 675 580 775</a>
+        </div>
+
+        <div>
+          <div style="font-size:13px; color:#374151; margin-bottom:8px;">Servicios</div>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/lucia-gonzalez1" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+
+        <!-- Sobre mí -->
+        <div class="about-block">
+          <h3> <br> Sobre mí</h3>
+          <p>Tengo las cosas claras.  <br>
+            Ayudo a digitalizar tu empresa. <br>
+            Lo hago con alma. <br>
+            Le pongo mi firma. <br>
+            Triunfamos juntos. <br> </p>
+        </div>
+      </aside>
+
+    </article>
+  </main>
+</body>
+</html>
